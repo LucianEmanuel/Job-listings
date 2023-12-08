@@ -16,7 +16,7 @@ function loadData() {
       return ` <article class="card show ${add.featured ? "green-border" : ""}">
           <div class="card-left">
             <img src="${add.logo}" alt="" />
-            <ul class="card-left__info">
+            <div class="card-left__info">
               <div class="info-add flex">
                 <p class="text-green text-bold">${add.company}</p>
                 ${
