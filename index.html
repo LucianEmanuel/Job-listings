@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"
+      defer
+    ></script>
+    <title>Frontend Mentor | Job Listings</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="sr-only">Job Listings</h1>
+      <div class="sorting-btns flex hidden">
+        <div class="sorting-btns__wrapper flex"></div>
+        <button class="clear-btn">Clear</button>
+      </div>
+    </header>
+    <main class="main-content">
+      <section class="cards"></section>
+    </main>
+    <script src="assets/js/data.js"></script>
+    <script type="module" src="assets/js/index.js"></script>
+  </body>
+</html>

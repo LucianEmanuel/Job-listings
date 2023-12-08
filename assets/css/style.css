@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
+
+/* =======================
+Reset
+==========================*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a,
+img,
+span,
+data,
+input,
+button,
+ion-icon {
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+input,
+button {
+  background: none;
+  border: none;
+  outline: none;
+  font: inherit;
+}
+
+input {
+  width: 100%;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  /* Colors */
+  --Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
+  --Light-Grayish-Cyan-Background: hsl(180, 52%, 96%);
+  --Light-Grayish-Cyan-Filter-Tablets: hsl(180, 31%, 95%);
+  --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+  --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+  /* Font */
+  --ff-body: "League Spartan", sans-serif;
+}
+
+body {
+  font-family: var(--ff-body);
+  background-color: var(--Light-Grayish-Cyan-Background);
+}
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.text-green {
+  color: var(--Desaturated-Dark-Cyan);
+}
+.text-bold {
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+h2:hover {
+  color: var(--Desaturated-Dark-Cyan);
+}
+
+.green-border {
+  border-left: 5px solid var(--Desaturated-Dark-Cyan);
+}
+.btn {
+  background-color: var(--Light-Grayish-Cyan-Filter-Tablets);
+
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--Desaturated-Dark-Cyan);
+}
+.accent-btn-black {
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+.accent-btn-green {
+  background-color: var(--Desaturated-Dark-Cyan);
+  color: white;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+.filter-btn:hover {
+  background-color: var(--Desaturated-Dark-Cyan);
+  color: var(--Light-Grayish-Cyan-Background);
+}
+.close-btn {
+  background-color: var(--Desaturated-Dark-Cyan);
+  height: 100%;
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 0 5px 5px 0;
+}
+.close-btn:hover {
+  background-color: black;
+}
+.btn-wrapper {
+  gap: 0;
+}
+.clear-btn {
+  background-color: transparent;
+  color: var(--Very-Dark-Grayish-Cyan);
+  font-weight: 700;
+  border: 0;
+  padding: 0;
+  line-height: 1;
+  order: 2;
+}
+.clear-btn:hover {
+  color: var(--Desaturated-Dark-Cyan);
+  border-bottom: 1px solid var(--Desaturated-Dark-Cyan);
+}
+
+.header {
+  position: relative;
+  height: 20vh;
+  background: url(../images/bg-header-mobile.svg) no-repeat top center/cover;
+  background-color: var(--Desaturated-Dark-Cyan);
+}
+.sorting-btns {
+  position: absolute;
+  flex-wrap: wrap;
+  bottom: -29px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1440px;
+  padding: 1rem 2rem;
+  box-shadow: 0 3px 20px 0px var(--Desaturated-Dark-Cyan);
+  background-color: white;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+.btns-container {
+  flex-wrap: wrap;
+}
+
+.main-content {
+  background-color: var(--Light-Grayish-Cyan-Background);
+  padding-bottom: 5rem;
+}
+
+.card {
+  background-color: white;
+  position: relative;
+  flex-direction: column;
+  padding: 2rem;
+  width: 90%;
+  margin-inline: auto;
+  margin-block: 4rem;
+  box-shadow: 0 3px 20px 0px var(--Desaturated-Dark-Cyan);
+  border-radius: 8px;
+  display: none;
+}
+.card-left {
+  border-bottom: 1px solid var(--Dark-Grayish-Cyan);
+  margin-bottom: 1rem;
+}
+.card-left__info > * {
+  margin-bottom: 0.5rem;
+}
+.card-left img {
+  position: absolute;
+  left: 0;
+  top: -25px;
+  left: 1.5rem;
+  width: 50px;
+}
+.info {
+  color: var(--Dark-Grayish-Cyan);
+}
+.info > * + * {
+  list-style-type: disc;
+  margin-left: 0.5rem;
+}
+.card-right {
+  flex-wrap: wrap;
+}
+@media (min-width: 900px) {
+  .header {
+    background: url(../images/bg-header-desktop.svg) no-repeat top center/cover;
+    background-color: var(--Desaturated-Dark-Cyan);
+  }
+  .card {
+    max-width: 1440px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .card-left img {
+    position: static;
+    width: 80px;
+  }
+  .card-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: none;
+  }
+}
+
+.hidden {
+  display: none;
+}
+.show {
+  display: flex;
+}
